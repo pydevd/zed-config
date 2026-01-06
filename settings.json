@@ -1,0 +1,328 @@
+{
+  // ====== Global Settings ======
+  "base_keymap": "VSCode",
+  "colorize_brackets": true,
+  "selection_highlight": true,
+  "auto_signature_help": true,
+  "remove_trailing_whitespace_on_save": true,
+  "close_on_file_delete": true,
+  "indent_guides": {
+    "coloring": "fixed",
+  },
+  // This one disables inline values during debugging session
+  "inlay_hints": {
+    "show_value_hints": false,
+  },
+
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "show_diagnostics": "all",
+  },
+
+  // ====== Autosave Settings ======
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 2500,
+    },
+  },
+  // ====== Debugger Settings ======
+  "debugger": {
+    "dock": "bottom",
+  },
+
+  // ====== Languages Settings ======
+  "languages": {
+    "Python": {
+      "language_servers": ["ruff", "basedpyright"],
+      "format_on_save": "on",
+      "show_wrap_guides": true,
+      "show_completions_on_input": true,
+      "wrap_guides": [88, 120],
+      "colorize_brackets": true,
+      "ensure_final_newline_on_save": true,
+      "enable_language_server": true,
+      "inlay_hints": {
+        "enabled": true,
+        "edit_debounce_ms": 2000,
+        "show_value_hints": false,
+      },
+      "formatter": [
+        {
+          "language_server": {
+            "name": "ruff",
+          },
+        },
+      ],
+    },
+  },
+
+  "lsp": {
+    "basedpyright": {
+      "settings": {
+        "basedpyright.analysis": {
+          "diagnosticMode": "openFilesOnly",
+          "typeCheckingMode": "strict",
+          "inlayHints": {
+            "callArgumentNames": false,
+            "variableTypes": false,
+          },
+        },
+      },
+    },
+  },
+
+  // ====== Project Panel Settings ======
+  "project_panel": {
+    "folder_icons": true,
+    "file_icons": true,
+  },
+
+  // ====== Other Settings ======
+  "edit_predictions": {
+    "mode": "subtle",
+  },
+  "toolbar": {
+    "code_actions": false,
+  },
+  "scrollbar": {
+    "show": "auto",
+    "diagnostics": "all",
+  },
+
+  "features": {
+    "edit_prediction_provider": "copilot",
+  },
+
+  "collaboration_panel": {
+    "dock": "right",
+    "button": false,
+  },
+  // ====== Agent Settings ======
+  "agent": {
+    "always_allow_tool_actions": true,
+    "play_sound_when_agent_done": true,
+    "message_editor_min_lines": 10,
+    "use_modifier_to_send": true,
+    "default_model": {
+      "provider": "copilot_chat",
+      "model": "claude-sonnet-4.5",
+    },
+    "model_parameters": [],
+  },
+
+  // ====== Files Settings ======
+  "file_scan_exclusions": [
+    "**/__pycache__",
+    "**/.git",
+    ".pgdata",
+    ".pytest_cache",
+    ".rabbitmq",
+    ".redisdata",
+    ".ruff_cache",
+    ".vscode",
+    ".coverage",
+    "*.egg-info",
+  ],
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+    },
+  },
+
+  // ====== Editor Settings ======
+  "buffer_font_family": "Fira Code",
+  "buffer_font_size": 12.0,
+  "buffer_line_height": {
+    "custom": 1.7,
+  },
+  "buffer_font_features": {
+    "calt": false,
+  },
+
+  // ====== UI Settings ======
+  "ui_font_family": "Adwaita Sans",
+  "ui_font_size": 16,
+  "icon_theme": "Material Icon Theme",
+  "theme": {
+    "mode": "dark",
+    "light": "One Light",
+    "dark": "Material Theme",
+  },
+
+  // ====== Terminal ======
+  "terminal": {
+    "working_directory": "current_project_directory",
+    "detect_venv": {
+      "on": {
+        "directories": [".venv"],
+        "activate_script": "default",
+      },
+    },
+    "cursor_shape": "underline",
+    "font_family": "Fira Code",
+    "font_size": 12,
+    "font_features": {
+      "calt": false,
+    },
+    "dock": "right",
+    "button": false,
+    "shell": "system",
+  },
+
+  // ====== Theme Override Settings =====
+  "theme_overrides": {
+    "Material Theme": {
+      "border": "#3b535e8f",
+      "terminal.background": "#263238",
+      "ghost_element.selected": "#3b535e8f",
+      "search.match_background": "#3b535e8f",
+      "text.muted": "#d9d9d9",
+      "editor.wrap_guide": "#3b535e8f",
+      "editor.indent_guide": "#3b535e8f",
+      "syntax": {
+        // classmethod
+        "attribute": {
+          "color": "#ceb0ea",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+        // True, False
+        "boolean": {
+          "color": "#ceb0ea",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+        // None
+        "constant.builtin": {
+          "background_color": null,
+          "color": "#ceb0ea",
+          "font_style": null,
+          "font_weight": null,
+        },
+        "keyword": {
+          "color": "#ceb0ea",
+          "background_color": null,
+          "font_style": "italic",
+          "font_weight": null,
+        },
+        "variable.special": {
+          "color": "#ceb0ea",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+        "function.builtin": {
+          "color": "#ceb0ea",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+        "comment": {
+          "color": "#8dacbd",
+          "background_color": null,
+          "font_style": "italic",
+          "font_weight": null,
+        },
+        "comment.doc": {
+          "color": "#8dacbd",
+          "background_color": null,
+          "font_style": "italic",
+          "font_weight": null,
+        },
+        "string.doc": {
+          "color": "#8dacbd",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+        // Functions + keyword parameters passing
+        "function.definition": {
+          "color": "#81d4fa",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+        "function.call": {
+          "color": "#81d4fa",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+        "function.kwargs": {
+          "color": "#98FB98",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+        "function.method.call": {
+          "color": "#F0E68C",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+        "function.decorator": {
+          "color": "#F0E68C",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+        "number": {
+          "color": "#a5d6a7",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+        "punctuation": {
+          "color": "#89DDFF",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+        "string": {
+          "color": "#C3E88D",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+        "string.escape": {
+          "color": "#66FFFF",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+        // Type annotations + Class names
+        "type": {
+          "color": "#87CEFA",
+          "font_style": null,
+          "font_weight": null,
+        },
+        "type.class": {
+          "color": "#80cbc4",
+          "font_style": null,
+          "font_weight": null,
+        },
+        "variable": {
+          "color": "#e3e3e3",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+        "variable.parameter": {
+          "color": "#F0E68C",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+        "property": {
+          "color": "#ef9a9a",
+          "background_color": null,
+          "font_style": null,
+          "font_weight": null,
+        },
+      },
+    },
+  },
+}
